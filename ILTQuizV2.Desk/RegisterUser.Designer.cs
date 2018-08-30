@@ -31,9 +31,9 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.TxtUser = new System.Windows.Forms.TextBox();
+            this.TxtPass = new System.Windows.Forms.TextBox();
+            this.BtnLogar = new System.Windows.Forms.Button();
             this.LblRegister = new System.Windows.Forms.LinkLabel();
             this.PnlLogin = new System.Windows.Forms.Panel();
             this.PnlRegister = new System.Windows.Forms.Panel();
@@ -78,29 +78,30 @@
             this.label3.TabIndex = 2;
             this.label3.Text = "IDENTIFIQUE-SE";
             // 
-            // textBox1
+            // TxtUser
             // 
-            this.textBox1.Location = new System.Drawing.Point(85, 2);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(160, 29);
-            this.textBox1.TabIndex = 3;
+            this.TxtUser.Location = new System.Drawing.Point(85, 2);
+            this.TxtUser.Name = "TxtUser";
+            this.TxtUser.Size = new System.Drawing.Size(160, 29);
+            this.TxtUser.TabIndex = 3;
             // 
-            // textBox2
+            // TxtPass
             // 
-            this.textBox2.Location = new System.Drawing.Point(85, 37);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.PasswordChar = '*';
-            this.textBox2.Size = new System.Drawing.Size(160, 29);
-            this.textBox2.TabIndex = 4;
+            this.TxtPass.Location = new System.Drawing.Point(85, 37);
+            this.TxtPass.Name = "TxtPass";
+            this.TxtPass.PasswordChar = '*';
+            this.TxtPass.Size = new System.Drawing.Size(160, 29);
+            this.TxtPass.TabIndex = 4;
             // 
-            // button1
+            // BtnLogar
             // 
-            this.button1.Location = new System.Drawing.Point(8, 74);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(237, 30);
-            this.button1.TabIndex = 5;
-            this.button1.Text = "Logar";
-            this.button1.UseVisualStyleBackColor = true;
+            this.BtnLogar.Location = new System.Drawing.Point(8, 74);
+            this.BtnLogar.Name = "BtnLogar";
+            this.BtnLogar.Size = new System.Drawing.Size(237, 30);
+            this.BtnLogar.TabIndex = 5;
+            this.BtnLogar.Text = "Logar";
+            this.BtnLogar.UseVisualStyleBackColor = true;
+            this.BtnLogar.Click += new System.EventHandler(this.BtnLogar_Click);
             // 
             // LblRegister
             // 
@@ -117,9 +118,9 @@
             // 
             this.PnlLogin.Controls.Add(this.label1);
             this.PnlLogin.Controls.Add(this.label2);
-            this.PnlLogin.Controls.Add(this.button1);
-            this.PnlLogin.Controls.Add(this.textBox1);
-            this.PnlLogin.Controls.Add(this.textBox2);
+            this.PnlLogin.Controls.Add(this.BtnLogar);
+            this.PnlLogin.Controls.Add(this.TxtUser);
+            this.PnlLogin.Controls.Add(this.TxtPass);
             this.PnlLogin.Location = new System.Drawing.Point(14, 37);
             this.PnlLogin.Name = "PnlLogin";
             this.PnlLogin.Size = new System.Drawing.Size(254, 108);
@@ -222,9 +223,9 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.TextBox TxtUser;
+        private System.Windows.Forms.TextBox TxtPass;
+        private System.Windows.Forms.Button BtnLogar;
         private System.Windows.Forms.LinkLabel LblRegister;
         private System.Windows.Forms.Panel PnlLogin;
         private System.Windows.Forms.Panel PnlRegister;

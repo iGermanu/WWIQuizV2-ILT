@@ -32,5 +32,15 @@ namespace ILTQuizV2.Desk
             LblRegister.Visible = true;
             LblLogar.Visible = false;
         }
+
+        private void BtnLogar_Click(object sender, EventArgs e)
+        {
+            Principal TelaPrincipal = new Principal();
+            Usuario User = new Usuario();
+            User.LogarUsuario(TxtUser.Text, TxtPass.Text);
+            this.Visible = false;
+            TelaPrincipal.ShowDialog();
+            this.Close();
+        }
     }
 }
