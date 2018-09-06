@@ -8,5 +8,10 @@ namespace ILTQuizV2.Desk
 {
     class Perguntas
     {
+        #region VARS
+        private string _pergunta;
+        private string _resposta;
+
+        #endregion
     }
 }
