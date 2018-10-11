@@ -6,12 +6,7 @@ using System.Threading.Tasks;
 
 namespace ILTQuizV2.Desk
 {
-    class Perguntas
+    class DB
     {
-        #region VARS
-        private string _pergunta;
-        private string _resposta;
-
-        #endregion
     }
 }
