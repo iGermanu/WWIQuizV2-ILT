@@ -67,6 +67,7 @@
             this.label15 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.Pn_top.SuspendLayout();
             this.Pn_armamento.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -79,6 +80,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.Pn_inicio.SuspendLayout();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.SuspendLayout();
             // 
             // Btn_inicio
@@ -118,7 +120,7 @@
             this.Btn_historia.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.Btn_historia.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Btn_historia.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.Btn_historia.Location = new System.Drawing.Point(13, 253);
+            this.Btn_historia.Location = new System.Drawing.Point(12, 404);
             this.Btn_historia.Name = "Btn_historia";
             this.Btn_historia.Size = new System.Drawing.Size(191, 145);
             this.Btn_historia.TabIndex = 2;
@@ -133,7 +135,7 @@
             this.Btn_veiculos.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.Btn_veiculos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Btn_veiculos.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.Btn_veiculos.Location = new System.Drawing.Point(13, 404);
+            this.Btn_veiculos.Location = new System.Drawing.Point(13, 253);
             this.Btn_veiculos.Name = "Btn_veiculos";
             this.Btn_veiculos.Size = new System.Drawing.Size(191, 145);
             this.Btn_veiculos.TabIndex = 3;
@@ -145,6 +147,7 @@
             // 
             this.Pn_top.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.Pn_top.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.Pn_top.Controls.Add(this.pictureBox4);
             this.Pn_top.Controls.Add(this.label3);
             this.Pn_top.Controls.Add(this.label4);
             this.Pn_top.Controls.Add(this.label2);
@@ -214,7 +217,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(15, 12);
+            this.label1.Location = new System.Drawing.Point(56, 12);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(95, 19);
             this.label1.TabIndex = 0;
@@ -224,7 +227,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.label2.Location = new System.Drawing.Point(102, 12);
+            this.label2.Location = new System.Drawing.Point(143, 12);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(19, 19);
             this.label2.TabIndex = 1;
@@ -523,6 +526,16 @@
             this.panel1.Size = new System.Drawing.Size(353, 100);
             this.panel1.TabIndex = 6;
             // 
+            // pictureBox4
+            // 
+            this.pictureBox4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox4.BackgroundImage")));
+            this.pictureBox4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBox4.Location = new System.Drawing.Point(15, 6);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(35, 32);
+            this.pictureBox4.TabIndex = 4;
+            this.pictureBox4.TabStop = false;
+            // 
             // Principal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
@@ -563,6 +576,7 @@
             this.Pn_inicio.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -607,5 +621,6 @@
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.PictureBox pictureBox4;
     }
 }
