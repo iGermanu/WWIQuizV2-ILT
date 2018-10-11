@@ -38,6 +38,7 @@ namespace ILTQuizV2.Desk
         }
         #endregion
 
+        #region BOTÕES DOS TÓPICOS
         private void Btn_inicio_Click(object sender, EventArgs e)
         {
             MudarTopico();
@@ -69,5 +70,6 @@ namespace ILTQuizV2.Desk
             AtivarBotoes();
             Btn_veiculos.Enabled = false;
         }
+        #endregion
     }
 }
