@@ -16,7 +16,7 @@ namespace ILTQuizV2.Desk
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new RegisterUser());
+            Application.Run(new Principal());
         }
     }
 }
