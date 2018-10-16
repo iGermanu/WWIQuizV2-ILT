@@ -16,13 +16,6 @@ CREATE TABLE IF NOT EXISTS resposta (
     correta BOOL
 );
 
-CREATE TABLE IF NOT EXISTS usuário (
-	id_user INT UNSIGNED NOT NULL PRIMARY KEY AUTO_INCREMENT,
-    nickname VARCHAR(15),
-    senha VARCHAR(25),
-    pontuação INT
-);
-
 INSERT INTO pergunta (id_perg, pergunta, categoria, dica) VALUES 
 (10, 'Qual das seguintes ferramentas também eram utilizadas como arma branca?', 1, 'Não era o capacete e nem a matraca'),
 (11, 'Onde, principalmente, eram utilizados os morteiros?', 1, 'Era um lugar protegido e não era em veículos'),
@@ -34,7 +27,7 @@ INSERT INTO pergunta (id_perg, pergunta, categoria, dica) VALUES
 (17, '', 1, ''),
 (18, '', 1, ''),
 (19, '', 1, ''),
-(20, 'Qual foi o primeira tanque de guerra utilizado na Primeira Guerra Mundial?', 2, 'Se chama Mark'),
+(20, 'Qual foi o primeiro tanque de guerra utilizado na Primeira Guerra Mundial?', 2, 'Se chama Mark'),
 (21, 'Para o transporte de armamentos eram utilizados, principalmente:', 2, 'Era blindado'),
 (22, 'Qual foi o país que mais criou veículos blindados?', 2, 'O mesmo que foi pioneiro no uso de granadas'),
 (23, 'Em 1917, os Estados unidos criaram seu primeiro tanque de guerra, seu nome era "Holt" 
@@ -57,9 +50,10 @@ foi muito violenta e ficou conhecida principalmente como:', 3, 'Tem "Bélgica" e
 (36, 'Por qual motivo o Brasil declarou guerra à Alemanha?', 3, 'O Brasil teve veículos abatidos'),
 (37, 'A Primeira Guerra Mundial foi centrada em qual continente?', 3, 'Não foi nas Américas'),
 (38, 'Qual foi o primeiro conflito da Primeira Guerra Mundial?', 3, 'Foi uma invasão'),
-(39, 'Qual organização surgiu para evitar outro conflito desse nível?', 3, 'Possui "Liga" em seu nome');
+(39, 'Qual organização surgiu para evitar outro conflito desse nível?', 3, 'Possui "Liga" em seu nome'),
+(40, 'Apenas um registro para evitar um bug', 4, 'Gambiarra');
 
-INSERT INTO pergunta (fk_perg, resposta, correta) VALUES 
+INSERT INTO resposta (fk_perg, resposta, correta) VALUES 
 (10, 'Capacete', false),
 (10, 'Chave inglesa', false),
 (10, 'Matraca', false),

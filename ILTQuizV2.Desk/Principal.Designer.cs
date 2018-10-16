@@ -60,7 +60,6 @@
             this.Pn_inicio = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label12 = new System.Windows.Forms.Label();
-            this.label16 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
@@ -483,13 +482,12 @@
             // panel1
             // 
             this.panel1.Controls.Add(this.label12);
-            this.panel1.Controls.Add(this.label16);
             this.panel1.Controls.Add(this.label13);
             this.panel1.Controls.Add(this.label15);
             this.panel1.Controls.Add(this.label14);
-            this.panel1.Location = new System.Drawing.Point(148, 188);
+            this.panel1.Location = new System.Drawing.Point(148, 197);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(353, 100);
+            this.panel1.Size = new System.Drawing.Size(353, 89);
             this.panel1.TabIndex = 6;
             // 
             // label12
@@ -500,15 +498,6 @@
             this.label12.Size = new System.Drawing.Size(246, 19);
             this.label12.TabIndex = 1;
             this.label12.Text = "Selecione um tópico para jogar.";
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(4, 80);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(314, 19);
-            this.label16.TabIndex = 5;
-            this.label16.Text = "* Você pode usar até 3 dicas por tópico;";
             // 
             // label13
             // 
@@ -542,7 +531,7 @@
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("MS Reference Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.label11.Location = new System.Drawing.Point(286, 161);
+            this.label11.Location = new System.Drawing.Point(286, 170);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(76, 24);
             this.label11.TabIndex = 0;
@@ -925,7 +914,7 @@
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Principal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Principal";
+            this.Text = "WWI Quiz";
             this.Pn_top.ResumeLayout(false);
             this.Pn_top.PerformLayout();
             this.Pn_armamento.ResumeLayout(false);
@@ -994,7 +983,6 @@
         private System.Windows.Forms.Panel Pn_inicio;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label13;

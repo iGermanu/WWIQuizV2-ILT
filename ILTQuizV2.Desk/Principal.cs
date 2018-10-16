@@ -224,7 +224,6 @@ namespace ILTQuizV2.Desk
             Btn_alternativa4.FlatAppearance.MouseDownBackColor = Color.White;
             HabilitaAlternativas(true);
             
-
             string perg = "SELECT categoria FROM pergunta ";
             perg += "WHERE id_perg = " + id_pergatual;
             DataSet resultado = _database.Search(perg);
@@ -419,12 +418,82 @@ namespace ILTQuizV2.Desk
 
         private void Btn_pular_Click(object sender, EventArgs e)
         {
+            id_pergatual++;
+            Btn_prox.Enabled = false;
 
+            string perg = "SELECT categoria FROM pergunta ";
+            perg += "WHERE id_perg = " + id_pergatual;
+            DataSet resultado = _database.Search(perg);
+            int categoria = Convert.ToInt32(resultado.Tables["tbl_resultado"].Rows[0]["categoria"]);
+
+            if (categoria == categoriaatual)
+            {
+                //PUXA PERGUNTA
+                perg = "SELECT pergunta FROM pergunta ";
+                perg += "WHERE id_perg = " + id_pergatual;
+                resultado = _database.Search(perg);
+                string pergunta = resultado.Tables["tbl_resultado"].Rows[0]["pergunta"].ToString();
+                Lbl_pergunta.Text = pergunta;
+
+                //PUXA RESPOSTAS
+                id_resp++;
+                string resposta1 = "SELECT resposta FROM resposta ";
+                resposta1 += "WHERE id_resp = " + id_resp;
+                resultado = _database.Search(resposta1);
+                resposta1 = resultado.Tables["tbl_resultado"].Rows[0]["resposta"].ToString();
+
+                id_resp++;
+                string resposta2 = "SELECT resposta FROM resposta ";
+                resposta2 += "WHERE id_resp = " + id_resp;
+                resultado = _database.Search(resposta2);
+                resposta2 = resultado.Tables["tbl_resultado"].Rows[0]["resposta"].ToString();
+
+                id_resp++;
+                string resposta3 = "SELECT resposta FROM resposta ";
+                resposta3 += "WHERE id_resp = " + id_resp;
+                resultado = _database.Search(resposta3);
+                resposta3 = resultado.Tables["tbl_resultado"].Rows[0]["resposta"].ToString();
+
+                id_resp++;
+                string resposta4 = "SELECT resposta FROM resposta ";
+                resposta4 += "WHERE id_resp = " + id_resp;
+                resultado = _database.Search(resposta4);
+                resposta4 = resultado.Tables["tbl_resultado"].Rows[0]["resposta"].ToString();
+
+                Btn_alternativa1.Text = resposta1;
+                Btn_alternativa2.Text = resposta2;
+                Btn_alternativa3.Text = resposta3;
+                Btn_alternativa4.Text = resposta4;
+
+                BottomButtons(true);
+            }
+            else
+            {
+                Pn_perguntas.Visible = false;
+                Pn_fim.Visible = true;
+                VisibilidadeBotoezinhos(false);
+                AtivarBotoes(true);
+                BottomButtons(false);
+            }
         }
 
         private void Btn_dica_Click(object sender, EventArgs e)
         {
+            string dca = "SELECT dica FROM pergunta ";
+            dca += "WHERE id_perg = " + id_pergatual;
+            DataSet resultado = _database.Search(dca);
+            string dica = resultado.Tables["tbl_resultado"].Rows[0]["dica"].ToString();
 
+            if (pontuacao > 5)
+            {
+                pontuacao -= 5;
+            }
+            else
+            {
+                pontuacao = 0;
+            }
+            Lbl_pontuacao.Text = pontuacao.ToString();
+            MessageBox.Show(dica, "Dica", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
         #endregion
     }
