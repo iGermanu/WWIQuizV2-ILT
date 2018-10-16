@@ -67,6 +67,14 @@
             this.label11 = new System.Windows.Forms.Label();
             this.Btn_close = new System.Windows.Forms.Button();
             this.Btn_minimize = new System.Windows.Forms.Button();
+            this.Pn_perguntas = new System.Windows.Forms.Panel();
+            this.Lbl_pergunta = new System.Windows.Forms.Label();
+            this.Btn_alternativa3 = new System.Windows.Forms.Button();
+            this.Btn_alternativa4 = new System.Windows.Forms.Button();
+            this.Btn_alternativa2 = new System.Windows.Forms.Button();
+            this.Btn_alternativa1 = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
+            this.Lbl_topico = new System.Windows.Forms.Label();
             this.Pn_top.SuspendLayout();
             this.Pn_armamento.SuspendLayout();
             this.Pn_playarmamento.SuspendLayout();
@@ -79,6 +87,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.Pn_inicio.SuspendLayout();
             this.panel1.SuspendLayout();
+            this.Pn_perguntas.SuspendLayout();
             this.SuspendLayout();
             // 
             // Btn_inicio
@@ -233,6 +242,7 @@
             this.Btn_playarmamento.TabIndex = 8;
             this.Btn_playarmamento.Text = "Jogar";
             this.Btn_playarmamento.UseVisualStyleBackColor = true;
+            this.Btn_playarmamento.Click += new System.EventHandler(this.Btn_playarmamento_Click);
             // 
             // label6
             // 
@@ -346,6 +356,7 @@
             this.Btn_playhistoria.TabIndex = 8;
             this.Btn_playhistoria.Text = "Jogar";
             this.Btn_playhistoria.UseVisualStyleBackColor = true;
+            this.Btn_playhistoria.Click += new System.EventHandler(this.Btn_playhistoria_Click);
             // 
             // label8
             // 
@@ -414,6 +425,7 @@
             this.Btn_playveiculos.TabIndex = 8;
             this.Btn_playveiculos.Text = "Jogar";
             this.Btn_playveiculos.UseVisualStyleBackColor = true;
+            this.Btn_playveiculos.Click += new System.EventHandler(this.Btn_playveiculos_Click);
             // 
             // label10
             // 
@@ -539,23 +551,130 @@
             this.Btn_minimize.UseVisualStyleBackColor = false;
             this.Btn_minimize.Click += new System.EventHandler(this.Btn_minimize_Click);
             // 
+            // Pn_perguntas
+            // 
+            this.Pn_perguntas.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.Pn_perguntas.Controls.Add(this.Lbl_topico);
+            this.Pn_perguntas.Controls.Add(this.label3);
+            this.Pn_perguntas.Controls.Add(this.Btn_alternativa2);
+            this.Pn_perguntas.Controls.Add(this.Btn_alternativa1);
+            this.Pn_perguntas.Controls.Add(this.Btn_alternativa4);
+            this.Pn_perguntas.Controls.Add(this.Btn_alternativa3);
+            this.Pn_perguntas.Controls.Add(this.Lbl_pergunta);
+            this.Pn_perguntas.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.Pn_perguntas.Location = new System.Drawing.Point(210, 62);
+            this.Pn_perguntas.Name = "Pn_perguntas";
+            this.Pn_perguntas.Size = new System.Drawing.Size(670, 445);
+            this.Pn_perguntas.TabIndex = 13;
+            this.Pn_perguntas.Visible = false;
+            // 
+            // Lbl_pergunta
+            // 
+            this.Lbl_pergunta.AutoSize = true;
+            this.Lbl_pergunta.Location = new System.Drawing.Point(24, 77);
+            this.Lbl_pergunta.MaximumSize = new System.Drawing.Size(619, 0);
+            this.Lbl_pergunta.Name = "Lbl_pergunta";
+            this.Lbl_pergunta.Size = new System.Drawing.Size(75, 19);
+            this.Lbl_pergunta.TabIndex = 0;
+            this.Lbl_pergunta.Text = "Pergunta";
+            this.Lbl_pergunta.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // Btn_alternativa3
+            // 
+            this.Btn_alternativa3.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.Btn_alternativa3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(201)))), ((int)(((byte)(201)))), ((int)(((byte)(201)))));
+            this.Btn_alternativa3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.Btn_alternativa3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Btn_alternativa3.Location = new System.Drawing.Point(24, 345);
+            this.Btn_alternativa3.Name = "Btn_alternativa3";
+            this.Btn_alternativa3.Size = new System.Drawing.Size(304, 73);
+            this.Btn_alternativa3.TabIndex = 1;
+            this.Btn_alternativa3.Text = "Alternativa 3";
+            this.Btn_alternativa3.UseVisualStyleBackColor = true;
+            this.Btn_alternativa3.Click += new System.EventHandler(this.Btn_alternativa3_Click);
+            // 
+            // Btn_alternativa4
+            // 
+            this.Btn_alternativa4.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.Btn_alternativa4.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(201)))), ((int)(((byte)(201)))), ((int)(((byte)(201)))));
+            this.Btn_alternativa4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.Btn_alternativa4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Btn_alternativa4.Location = new System.Drawing.Point(339, 345);
+            this.Btn_alternativa4.Name = "Btn_alternativa4";
+            this.Btn_alternativa4.Size = new System.Drawing.Size(304, 73);
+            this.Btn_alternativa4.TabIndex = 2;
+            this.Btn_alternativa4.Text = "Alternativa 4";
+            this.Btn_alternativa4.UseVisualStyleBackColor = true;
+            this.Btn_alternativa4.Click += new System.EventHandler(this.Btn_alternativa4_Click);
+            // 
+            // Btn_alternativa2
+            // 
+            this.Btn_alternativa2.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.Btn_alternativa2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(201)))), ((int)(((byte)(201)))), ((int)(((byte)(201)))));
+            this.Btn_alternativa2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.Btn_alternativa2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Btn_alternativa2.Location = new System.Drawing.Point(339, 269);
+            this.Btn_alternativa2.Name = "Btn_alternativa2";
+            this.Btn_alternativa2.Size = new System.Drawing.Size(304, 73);
+            this.Btn_alternativa2.TabIndex = 4;
+            this.Btn_alternativa2.Text = "Alternativa 2";
+            this.Btn_alternativa2.UseVisualStyleBackColor = true;
+            this.Btn_alternativa2.Click += new System.EventHandler(this.Btn_alternativa2_Click);
+            // 
+            // Btn_alternativa1
+            // 
+            this.Btn_alternativa1.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.Btn_alternativa1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(201)))), ((int)(((byte)(201)))), ((int)(((byte)(201)))));
+            this.Btn_alternativa1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.Btn_alternativa1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Btn_alternativa1.Location = new System.Drawing.Point(24, 269);
+            this.Btn_alternativa1.Name = "Btn_alternativa1";
+            this.Btn_alternativa1.Size = new System.Drawing.Size(304, 73);
+            this.Btn_alternativa1.TabIndex = 3;
+            this.Btn_alternativa1.Text = "Alternativa 1";
+            this.Btn_alternativa1.UseVisualStyleBackColor = true;
+            this.Btn_alternativa1.Click += new System.EventHandler(this.Btn_alternativa1_Click);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("MS Reference Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.label3.Location = new System.Drawing.Point(28, 19);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(318, 19);
+            this.label3.TabIndex = 5;
+            this.label3.Text = "Você está respondendo perguntas sobre:";
+            // 
+            // Lbl_topico
+            // 
+            this.Lbl_topico.AutoSize = true;
+            this.Lbl_topico.Font = new System.Drawing.Font("MS Reference Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Lbl_topico.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.Lbl_topico.Location = new System.Drawing.Point(339, 19);
+            this.Lbl_topico.Name = "Lbl_topico";
+            this.Lbl_topico.Size = new System.Drawing.Size(73, 19);
+            this.Lbl_topico.TabIndex = 6;
+            this.Lbl_topico.Text = "TÓPICO";
+            // 
             // Principal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(892, 561);
-            this.Controls.Add(this.Pn_inicio);
-            this.Controls.Add(this.Pn_historia);
-            this.Controls.Add(this.Pn_veiculos);
+            this.Controls.Add(this.Pn_perguntas);
             this.Controls.Add(this.Btn_pular);
             this.Controls.Add(this.Btn_dica);
-            this.Controls.Add(this.Pn_armamento);
             this.Controls.Add(this.Btn_prox);
             this.Controls.Add(this.Pn_top);
             this.Controls.Add(this.Btn_veiculos);
             this.Controls.Add(this.Btn_historia);
             this.Controls.Add(this.Btn_armamento);
             this.Controls.Add(this.Btn_inicio);
+            this.Controls.Add(this.Pn_historia);
+            this.Controls.Add(this.Pn_veiculos);
+            this.Controls.Add(this.Pn_armamento);
+            this.Controls.Add(this.Pn_inicio);
             this.Font = new System.Drawing.Font("MS Reference Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ForeColor = System.Drawing.Color.DarkOliveGreen;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -581,6 +700,8 @@
             this.Pn_inicio.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            this.Pn_perguntas.ResumeLayout(false);
+            this.Pn_perguntas.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -625,5 +746,13 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button Btn_minimize;
         private System.Windows.Forms.Button Btn_close;
+        private System.Windows.Forms.Panel Pn_perguntas;
+        private System.Windows.Forms.Label Lbl_topico;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Button Btn_alternativa2;
+        private System.Windows.Forms.Button Btn_alternativa1;
+        private System.Windows.Forms.Button Btn_alternativa4;
+        private System.Windows.Forms.Button Btn_alternativa3;
+        private System.Windows.Forms.Label Lbl_pergunta;
     }
 }
