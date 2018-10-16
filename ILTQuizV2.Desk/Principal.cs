@@ -18,6 +18,7 @@ namespace ILTQuizV2.Desk
         int id_pergatual;
         int id_resp;
         int pontuacao = 0;
+        int categoriaatual;
         public Principal()
         {
             InitializeComponent();
@@ -66,6 +67,22 @@ namespace ILTQuizV2.Desk
             }
         }
 
+        public void VisibilidadeBotoezinhos(bool Ativar)
+        {
+            if (Ativar)
+            {
+                Btn_prox.Visible = true;
+                Btn_pular.Visible = true;
+                Btn_dica.Visible = true;
+            }
+            else
+            {
+                Btn_prox.Visible = false;
+                Btn_pular.Visible = false;
+                Btn_dica.Visible = false;
+            }
+        }
+
         public void AtivarProxima(bool Ativar)
         {
             if (Ativar)
@@ -82,16 +99,18 @@ namespace ILTQuizV2.Desk
         {
             AtivarBotoes(false);
             Lbl_topico.Text = Topico;
-            // PUXA A PERGUNTA DO BANCO DE DADOS
-            string strSQL = "SELECT pergunta FROM pergunta ";
-            strSQL += "WHERE id_perg = (SELECT MIN(id_perg) FROM pergunta WHERE categoria = " + Categoria + ")";
-            DataSet resultado = _database.Search(strSQL);
-            string pergunta = resultado.Tables["tbl_resultado"].Rows[0]["pergunta"].ToString();
+            categoriaatual = Categoria;
 
-            strSQL = "SELECT pergunta FROM pergunta ";
-            strSQL += "WHERE id_perg = (SELECT MIN(id_perg) FROM pergunta WHERE categoria = " + Categoria + ")";
-            resultado = _database.Search(strSQL);
-            pergunta = resultado.Tables["tbl_resultado"].Rows[0]["pergunta"].ToString();
+            // PUXA A PERGUNTA DO BANCO DE DADOS
+            string perg = "SELECT id_perg FROM pergunta ";
+            perg += "WHERE id_perg = (SELECT MIN(id_perg) FROM pergunta WHERE categoria = " + Categoria + ")";
+            DataSet resultado = _database.Search(perg);
+            id_pergatual = Convert.ToInt32(resultado.Tables["tbl_resultado"].Rows[0]["id_perg"]);
+
+            perg = "SELECT pergunta FROM pergunta ";
+            perg += "WHERE id_perg = " + id_pergatual;
+            resultado = _database.Search(perg);
+            string pergunta = resultado.Tables["tbl_resultado"].Rows[0]["pergunta"].ToString();
             Lbl_pergunta.Text = pergunta;
 
             // PUXA AS RESPOSTAS DO BANCO DE DADOS
@@ -129,16 +148,32 @@ namespace ILTQuizV2.Desk
             Pn_perguntas.Visible = true;
         }
 
+        public void HabilitaAlternativas(bool Ativar)
+        {
+            if (Ativar)
+            {
+                Btn_alternativa1.Enabled = true;
+                Btn_alternativa2.Enabled = true;
+                Btn_alternativa3.Enabled = true;
+                Btn_alternativa4.Enabled = true;
+            }
+            else
+            {
+                Btn_alternativa1.Enabled = false;
+                Btn_alternativa2.Enabled = false;
+                Btn_alternativa3.Enabled = false;
+                Btn_alternativa4.Enabled = false;
+            }
+        }
+
         public void VerificarAlternativa(Button Alternativa)
         {
-            // DESABILITA AS OUTRAS OPÇÕES
-            Btn_alternativa1.Enabled = false;
-            Btn_alternativa2.Enabled = false;
-            Btn_alternativa3.Enabled = false;
-            Btn_alternativa4.Enabled = false;
-            Alternativa.Enabled = true;
-            string Resposta = Alternativa.Text;
+            // DESABILITA O CLIQUE NOS BOTÕES
+            Btn_dica.Enabled = false;
+            Btn_pular.Enabled = false;
+            HabilitaAlternativas(false);
 
+            string Resposta = Alternativa.Text;
             string strSQL = "SELECT correta FROM resposta ";
             strSQL += "WHERE resposta = '" + Resposta + "'";
             DataSet resultado = _database.Search(strSQL);
@@ -147,11 +182,15 @@ namespace ILTQuizV2.Desk
             if (correta)
             {
                 Alternativa.BackColor = Color.Green;
+                Alternativa.FlatAppearance.MouseOverBackColor = Color.Green;
+                Alternativa.FlatAppearance.MouseDownBackColor = Color.Green;
                 pontuacao += 20;
             }
             else
             {
                 Alternativa.BackColor = Color.Red;
+                Alternativa.FlatAppearance.MouseOverBackColor = Color.Red;
+                Alternativa.FlatAppearance.MouseDownBackColor = Color.Red;
                 if (pontuacao > 10)
                 {
                     pontuacao -= 10;
@@ -164,6 +203,83 @@ namespace ILTQuizV2.Desk
             Lbl_pontuacao.Text = pontuacao.ToString();
             Btn_prox.Enabled = true;
         }
+
+        public void ProximaPergunta()
+        {
+            id_pergatual++;
+            Btn_prox.Enabled = false;
+
+            //RESETA OS BOTÕES DE ALTERNATIVA
+            Btn_alternativa1.BackColor = Color.White;
+            Btn_alternativa1.FlatAppearance.MouseOverBackColor = Color.White;
+            Btn_alternativa1.FlatAppearance.MouseDownBackColor = Color.White;
+            Btn_alternativa2.BackColor = Color.White;
+            Btn_alternativa2.FlatAppearance.MouseOverBackColor = Color.White;
+            Btn_alternativa2.FlatAppearance.MouseDownBackColor = Color.White;
+            Btn_alternativa3.BackColor = Color.White;
+            Btn_alternativa3.FlatAppearance.MouseOverBackColor = Color.White;
+            Btn_alternativa3.FlatAppearance.MouseDownBackColor = Color.White;
+            Btn_alternativa4.BackColor = Color.White;
+            Btn_alternativa4.FlatAppearance.MouseOverBackColor = Color.White;
+            Btn_alternativa4.FlatAppearance.MouseDownBackColor = Color.White;
+            HabilitaAlternativas(true);
+            
+
+            string perg = "SELECT categoria FROM pergunta ";
+            perg += "WHERE id_perg = " + id_pergatual;
+            DataSet resultado = _database.Search(perg);
+            int categoria = Convert.ToInt32(resultado.Tables["tbl_resultado"].Rows[0]["categoria"]);
+
+            if (categoria == categoriaatual)
+            {
+                //PUXA PERGUNTA
+                perg = "SELECT pergunta FROM pergunta ";
+                perg += "WHERE id_perg = " + id_pergatual;
+                resultado = _database.Search(perg);
+                string pergunta = resultado.Tables["tbl_resultado"].Rows[0]["pergunta"].ToString();
+                Lbl_pergunta.Text = pergunta;
+
+                //PUXA RESPOSTAS
+                id_resp++;
+                string resposta1 = "SELECT resposta FROM resposta ";
+                resposta1 += "WHERE id_resp = " + id_resp;
+                resultado = _database.Search(resposta1);
+                resposta1 = resultado.Tables["tbl_resultado"].Rows[0]["resposta"].ToString();
+
+                id_resp++;
+                string resposta2 = "SELECT resposta FROM resposta ";
+                resposta2 += "WHERE id_resp = " + id_resp;
+                resultado = _database.Search(resposta2);
+                resposta2 = resultado.Tables["tbl_resultado"].Rows[0]["resposta"].ToString();
+
+                id_resp++;
+                string resposta3 = "SELECT resposta FROM resposta ";
+                resposta3 += "WHERE id_resp = " + id_resp;
+                resultado = _database.Search(resposta3);
+                resposta3 = resultado.Tables["tbl_resultado"].Rows[0]["resposta"].ToString();
+
+                id_resp++;
+                string resposta4 = "SELECT resposta FROM resposta ";
+                resposta4 += "WHERE id_resp = " + id_resp;
+                resultado = _database.Search(resposta4);
+                resposta4 = resultado.Tables["tbl_resultado"].Rows[0]["resposta"].ToString();
+
+                Btn_alternativa1.Text = resposta1;
+                Btn_alternativa2.Text = resposta2;
+                Btn_alternativa3.Text = resposta3;
+                Btn_alternativa4.Text = resposta4;
+
+                BottomButtons(true);
+            }
+            else
+            {
+                Pn_perguntas.Visible = false;
+                Pn_fim.Visible = true;
+                VisibilidadeBotoezinhos(false);
+                AtivarBotoes(true);
+                BottomButtons(false);
+            }
+        }
         #endregion
 
         #region BOTÕES DOS TÓPICOS
@@ -173,6 +289,11 @@ namespace ILTQuizV2.Desk
             Pn_inicio.Visible = true;
             AtivarBotoes(true);
             Btn_inicio.Enabled = false;
+            if (Pn_fim.Visible == true)
+            {
+                Pn_fim.Visible = false;
+            }
+            VisibilidadeBotoezinhos(false);
         }
 
         private void Btn_armamento_Click(object sender, EventArgs e)
@@ -181,6 +302,11 @@ namespace ILTQuizV2.Desk
             Pn_armamento.Visible = true;
             AtivarBotoes(true);
             Btn_armamento.Enabled = false;
+            if (Pn_fim.Visible == true)
+            {
+                Pn_fim.Visible = false;
+            }
+            VisibilidadeBotoezinhos(true);
         }
 
         private void Btn_historia_Click(object sender, EventArgs e)
@@ -189,6 +315,11 @@ namespace ILTQuizV2.Desk
             Pn_historia.Visible = true;
             AtivarBotoes(true);
             Btn_historia.Enabled = false;
+            if (Pn_fim.Visible == true)
+            {
+                Pn_fim.Visible = false;
+            }
+            VisibilidadeBotoezinhos(true);
         }
 
         private void Btn_veiculos_Click(object sender, EventArgs e)
@@ -197,6 +328,11 @@ namespace ILTQuizV2.Desk
             Pn_veiculos.Visible = true;
             AtivarBotoes(true);
             Btn_veiculos.Enabled = false;
+            if (Pn_fim.Visible == true)
+            {
+                Pn_fim.Visible = false;
+            }
+            VisibilidadeBotoezinhos(true);
         }
         #endregion
 
@@ -272,6 +408,23 @@ namespace ILTQuizV2.Desk
         private void Btn_alternativa4_Click(object sender, EventArgs e)
         {
             VerificarAlternativa((Button)sender);
+        }
+        #endregion
+
+        #region BOTÕES DE BAIXO
+        private void Btn_prox_Click(object sender, EventArgs e)
+        {
+            ProximaPergunta();
+        }
+
+        private void Btn_pular_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Btn_dica_Click(object sender, EventArgs e)
+        {
+
         }
         #endregion
     }
