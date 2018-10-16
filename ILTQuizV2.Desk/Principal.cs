@@ -12,6 +12,8 @@ namespace ILTQuizV2.Desk
 {
     public partial class Principal : Form
     {
+        int X;
+        int Y;
         private DB _database = new DB();
         public Principal()
         {
@@ -69,6 +71,32 @@ namespace ILTQuizV2.Desk
             Pn_veiculos.Visible = true;
             AtivarBotoes();
             Btn_veiculos.Enabled = false;
+        }
+        #endregion
+
+        #region FRESCURAS
+        private void Btn_close_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void Btn_minimize_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void Pn_top_MouseDown(object sender, MouseEventArgs e)
+        {
+            if (e.Button != MouseButtons.Left) return;
+            X = this.Left - MousePosition.X;
+            Y = this.Top - MousePosition.Y;
+        }
+
+        private void Pn_top_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (e.Button != MouseButtons.Left) return;
+            this.Left = X + MousePosition.X;
+            this.Top = Y + MousePosition.Y;
         }
         #endregion
     }
