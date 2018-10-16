@@ -15,6 +15,9 @@ namespace ILTQuizV2.Desk
         int X;
         int Y;
         private DB _database = new DB();
+        int id_pergatual;
+        int id_resp;
+        int pontuacao = 0;
         public Principal()
         {
             InitializeComponent();
@@ -84,26 +87,82 @@ namespace ILTQuizV2.Desk
             strSQL += "WHERE id_perg = (SELECT MIN(id_perg) FROM pergunta WHERE categoria = " + Categoria + ")";
             DataSet resultado = _database.Search(strSQL);
             string pergunta = resultado.Tables["tbl_resultado"].Rows[0]["pergunta"].ToString();
+
+            strSQL = "SELECT pergunta FROM pergunta ";
+            strSQL += "WHERE id_perg = (SELECT MIN(id_perg) FROM pergunta WHERE categoria = " + Categoria + ")";
+            resultado = _database.Search(strSQL);
+            pergunta = resultado.Tables["tbl_resultado"].Rows[0]["pergunta"].ToString();
             Lbl_pergunta.Text = pergunta;
 
             // PUXA AS RESPOSTAS DO BANCO DE DADOS
-            string id_resp = "SELECT id_resp FROM resposta ";
-            id_resp += "WHERE fk_perg = (SELECT MIN(id_resp) FROM resposta WHERE categoria = " + Categoria + ")";
+            string resp = "SELECT id_resp FROM resposta ";
+            resp += "WHERE fk_perg = (SELECT MIN(id_perg) FROM pergunta WHERE categoria = " + Categoria + ")";
+            resultado = _database.Search(resp);
+            resp = resultado.Tables["tbl_resultado"].Rows[0]["id_resp"].ToString();
+            id_resp = Convert.ToInt32(resp);
 
             string resposta1 = "SELECT resposta FROM resposta ";
-            resposta1 += "WHERE id_resp = ";
+            resposta1 += "WHERE id_resp = " + id_resp;
+            resultado = _database.Search(resposta1);
+            resposta1 = resultado.Tables["tbl_resultado"].Rows[0]["resposta"].ToString();
+            id_resp++;
+            string resposta2 = "SELECT resposta FROM resposta ";
+            resposta2 += "WHERE id_resp = " + id_resp;
+            resultado = _database.Search(resposta2);
+            resposta2 = resultado.Tables["tbl_resultado"].Rows[0]["resposta"].ToString();
+            id_resp++;
+            string resposta3 = "SELECT resposta FROM resposta ";
+            resposta3 += "WHERE id_resp = " + id_resp;
+            resultado = _database.Search(resposta3);
+            resposta3 = resultado.Tables["tbl_resultado"].Rows[0]["resposta"].ToString();
+            id_resp++;
+            string resposta4 = "SELECT resposta FROM resposta ";
+            resposta4 += "WHERE id_resp = " + id_resp;
+            resultado = _database.Search(resposta4);
+            resposta4 = resultado.Tables["tbl_resultado"].Rows[0]["resposta"].ToString();
 
+            Btn_alternativa1.Text = resposta1;
+            Btn_alternativa2.Text = resposta2;
+            Btn_alternativa3.Text = resposta3;
+            Btn_alternativa4.Text = resposta4;
 
             Pn_perguntas.Visible = true;
         }
 
-        public void DesativarAlternativa(Button Alternativa)
+        public void VerificarAlternativa(Button Alternativa)
         {
+            // DESABILITA AS OUTRAS OPÇÕES
             Btn_alternativa1.Enabled = false;
             Btn_alternativa2.Enabled = false;
             Btn_alternativa3.Enabled = false;
             Btn_alternativa4.Enabled = false;
             Alternativa.Enabled = true;
+            string Resposta = Alternativa.Text;
+
+            string strSQL = "SELECT correta FROM resposta ";
+            strSQL += "WHERE resposta = '" + Resposta + "'";
+            DataSet resultado = _database.Search(strSQL);
+            bool correta = Convert.ToBoolean(resultado.Tables["tbl_resultado"].Rows[0]["correta"]);
+
+            if (correta)
+            {
+                Alternativa.BackColor = Color.Green;
+                pontuacao += 20;
+            }
+            else
+            {
+                Alternativa.BackColor = Color.Red;
+                if (pontuacao > 10)
+                {
+                    pontuacao -= 10;
+                }
+                else
+                {
+                    pontuacao = 0;
+                }
+            }
+            Lbl_pontuacao.Text = pontuacao.ToString();
+            Btn_prox.Enabled = true;
         }
         #endregion
 
@@ -197,22 +256,22 @@ namespace ILTQuizV2.Desk
         #region ALTERNATIVAS
         private void Btn_alternativa1_Click(object sender, EventArgs e)
         {
-            DesativarAlternativa((Button)sender);
+            VerificarAlternativa((Button)sender);
         }
 
         private void Btn_alternativa2_Click(object sender, EventArgs e)
         {
-            DesativarAlternativa((Button)sender);
+            VerificarAlternativa((Button)sender);
         }
 
         private void Btn_alternativa3_Click(object sender, EventArgs e)
         {
-            DesativarAlternativa((Button)sender);
+            VerificarAlternativa((Button)sender);
         }
 
         private void Btn_alternativa4_Click(object sender, EventArgs e)
         {
-            DesativarAlternativa((Button)sender);
+            VerificarAlternativa((Button)sender);
         }
         #endregion
     }

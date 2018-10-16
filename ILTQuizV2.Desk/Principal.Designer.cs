@@ -34,7 +34,7 @@
             this.Btn_historia = new System.Windows.Forms.Button();
             this.Btn_veiculos = new System.Windows.Forms.Button();
             this.Pn_top = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
+            this.Lbl_pontuacao = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.Pn_armamento = new System.Windows.Forms.Panel();
             this.Pn_playarmamento = new System.Windows.Forms.Panel();
@@ -156,7 +156,7 @@
             this.Pn_top.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.Pn_top.Controls.Add(this.Btn_minimize);
             this.Pn_top.Controls.Add(this.Btn_close);
-            this.Pn_top.Controls.Add(this.label2);
+            this.Pn_top.Controls.Add(this.Lbl_pontuacao);
             this.Pn_top.Controls.Add(this.label1);
             this.Pn_top.ForeColor = System.Drawing.Color.Gray;
             this.Pn_top.Location = new System.Drawing.Point(-3, -1);
@@ -166,15 +166,15 @@
             this.Pn_top.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Pn_top_MouseDown);
             this.Pn_top.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Pn_top_MouseMove);
             // 
-            // label2
+            // Lbl_pontuacao
             // 
-            this.label2.AutoSize = true;
-            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.label2.Location = new System.Drawing.Point(93, 12);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(19, 19);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "0";
+            this.Lbl_pontuacao.AutoSize = true;
+            this.Lbl_pontuacao.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.Lbl_pontuacao.Location = new System.Drawing.Point(93, 12);
+            this.Lbl_pontuacao.Name = "Lbl_pontuacao";
+            this.Lbl_pontuacao.Size = new System.Drawing.Size(19, 19);
+            this.Lbl_pontuacao.TabIndex = 1;
+            this.Lbl_pontuacao.Text = "0";
             // 
             // label1
             // 
@@ -662,7 +662,6 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(892, 561);
-            this.Controls.Add(this.Pn_perguntas);
             this.Controls.Add(this.Btn_pular);
             this.Controls.Add(this.Btn_dica);
             this.Controls.Add(this.Btn_prox);
@@ -671,10 +670,11 @@
             this.Controls.Add(this.Btn_historia);
             this.Controls.Add(this.Btn_armamento);
             this.Controls.Add(this.Btn_inicio);
+            this.Controls.Add(this.Pn_inicio);
+            this.Controls.Add(this.Pn_perguntas);
             this.Controls.Add(this.Pn_historia);
             this.Controls.Add(this.Pn_veiculos);
             this.Controls.Add(this.Pn_armamento);
-            this.Controls.Add(this.Pn_inicio);
             this.Font = new System.Drawing.Font("MS Reference Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ForeColor = System.Drawing.Color.DarkOliveGreen;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -717,7 +717,7 @@
         private System.Windows.Forms.Button Btn_pular;
         private System.Windows.Forms.Button Btn_dica;
         private System.Windows.Forms.Button Btn_prox;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label Lbl_pontuacao;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label6;
