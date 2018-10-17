@@ -25,3 +25,16 @@ C:\Users\HERO\Documents\GitHub\WWIQuizV2\ILTQuizV2.Desk\obj\Debug\ILTQuizV2.Desk
 C:\Users\HERO\Documents\GitHub\WWIQuizV2\ILTQuizV2.Desk\obj\Debug\ILTQuizV2.Desk.csproj.CopyComplete
 C:\Users\HERO\Documents\GitHub\WWIQuizV2\ILTQuizV2.Desk\obj\Debug\ILTQuizV2.Desk.exe
 C:\Users\HERO\Documents\GitHub\WWIQuizV2\ILTQuizV2.Desk\obj\Debug\ILTQuizV2.Desk.pdb
+C:\Users\a1704184\Documents\GitHub\WWIQuizV2-ILT\ILTQuizV2.Desk\bin\Debug\ILTQuizV2.Desk.exe.config
+C:\Users\a1704184\Documents\GitHub\WWIQuizV2-ILT\ILTQuizV2.Desk\bin\Debug\ILTQuizV2.Desk.exe
+C:\Users\a1704184\Documents\GitHub\WWIQuizV2-ILT\ILTQuizV2.Desk\bin\Debug\ILTQuizV2.Desk.pdb
+C:\Users\a1704184\Documents\GitHub\WWIQuizV2-ILT\ILTQuizV2.Desk\bin\Debug\Google.Protobuf.dll
+C:\Users\a1704184\Documents\GitHub\WWIQuizV2-ILT\ILTQuizV2.Desk\bin\Debug\MySql.Data.xml
+C:\Users\a1704184\Documents\GitHub\WWIQuizV2-ILT\ILTQuizV2.Desk\obj\Debug\ILTQuizV2.Desk.csprojAssemblyReference.cache
+C:\Users\a1704184\Documents\GitHub\WWIQuizV2-ILT\ILTQuizV2.Desk\obj\Debug\ILTQuizV2.Desk.Principal.resources
+C:\Users\a1704184\Documents\GitHub\WWIQuizV2-ILT\ILTQuizV2.Desk\obj\Debug\ILTQuizV2.Desk.Properties.Resources.resources
+C:\Users\a1704184\Documents\GitHub\WWIQuizV2-ILT\ILTQuizV2.Desk\obj\Debug\ILTQuizV2.Desk.csproj.GenerateResource.cache
+C:\Users\a1704184\Documents\GitHub\WWIQuizV2-ILT\ILTQuizV2.Desk\obj\Debug\ILTQuizV2.Desk.csproj.CoreCompileInputs.cache
+C:\Users\a1704184\Documents\GitHub\WWIQuizV2-ILT\ILTQuizV2.Desk\obj\Debug\ILTQuizV2.Desk.csproj.CopyComplete
+C:\Users\a1704184\Documents\GitHub\WWIQuizV2-ILT\ILTQuizV2.Desk\obj\Debug\ILTQuizV2.Desk.exe
+C:\Users\a1704184\Documents\GitHub\WWIQuizV2-ILT\ILTQuizV2.Desk\obj\Debug\ILTQuizV2.Desk.pdb

@@ -34,6 +34,8 @@
             this.Btn_historia = new System.Windows.Forms.Button();
             this.Btn_veiculos = new System.Windows.Forms.Button();
             this.Pn_top = new System.Windows.Forms.Panel();
+            this.Btn_minimize = new System.Windows.Forms.Button();
+            this.Btn_close = new System.Windows.Forms.Button();
             this.Lbl_pontuacao = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.Pn_armamento = new System.Windows.Forms.Panel();
@@ -42,6 +44,11 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.Btn_playarmamento = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.pictureBox6 = new System.Windows.Forms.PictureBox();
+            this.label21 = new System.Windows.Forms.Label();
+            this.button3 = new System.Windows.Forms.Button();
+            this.label22 = new System.Windows.Forms.Label();
             this.Btn_prox = new System.Windows.Forms.Button();
             this.Btn_dica = new System.Windows.Forms.Button();
             this.Btn_pular = new System.Windows.Forms.Button();
@@ -51,12 +58,22 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.Btn_playhistoria = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.label4 = new System.Windows.Forms.Label();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.label17 = new System.Windows.Forms.Label();
             this.Pn_veiculos = new System.Windows.Forms.Panel();
             this.Pn_playveiculos = new System.Windows.Forms.Panel();
             this.label9 = new System.Windows.Forms.Label();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.Btn_playveiculos = new System.Windows.Forms.Button();
             this.label10 = new System.Windows.Forms.Label();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.label18 = new System.Windows.Forms.Label();
+            this.button2 = new System.Windows.Forms.Button();
+            this.label19 = new System.Windows.Forms.Label();
             this.Pn_inicio = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label12 = new System.Windows.Forms.Label();
@@ -64,54 +81,37 @@
             this.label15 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
-            this.Btn_close = new System.Windows.Forms.Button();
-            this.Btn_minimize = new System.Windows.Forms.Button();
             this.Pn_perguntas = new System.Windows.Forms.Panel();
-            this.Lbl_pergunta = new System.Windows.Forms.Label();
-            this.Btn_alternativa3 = new System.Windows.Forms.Button();
-            this.Btn_alternativa4 = new System.Windows.Forms.Button();
+            this.Lbl_topico = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             this.Btn_alternativa2 = new System.Windows.Forms.Button();
             this.Btn_alternativa1 = new System.Windows.Forms.Button();
-            this.label3 = new System.Windows.Forms.Label();
-            this.Lbl_topico = new System.Windows.Forms.Label();
+            this.Btn_alternativa4 = new System.Windows.Forms.Button();
+            this.Btn_alternativa3 = new System.Windows.Forms.Button();
+            this.Lbl_pergunta = new System.Windows.Forms.Label();
             this.Pn_fim = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.label4 = new System.Windows.Forms.Label();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.label17 = new System.Windows.Forms.Label();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.label18 = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
-            this.label19 = new System.Windows.Forms.Label();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.label21 = new System.Windows.Forms.Label();
-            this.button3 = new System.Windows.Forms.Button();
-            this.label22 = new System.Windows.Forms.Label();
-            this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.Pn_top.SuspendLayout();
             this.Pn_armamento.SuspendLayout();
             this.Pn_playarmamento.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.panel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             this.Pn_historia.SuspendLayout();
             this.Pn_playhistoria.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.Pn_veiculos.SuspendLayout();
             this.Pn_playveiculos.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             this.Pn_inicio.SuspendLayout();
             this.panel1.SuspendLayout();
             this.Pn_perguntas.SuspendLayout();
             this.Pn_fim.SuspendLayout();
-            this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
-            this.panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
-            this.panel4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             this.SuspendLayout();
             // 
             // Btn_inicio
@@ -189,6 +189,40 @@
             this.Pn_top.TabIndex = 1;
             this.Pn_top.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Pn_top_MouseDown);
             this.Pn_top.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Pn_top_MouseMove);
+            // 
+            // Btn_minimize
+            // 
+            this.Btn_minimize.BackColor = System.Drawing.SystemColors.Control;
+            this.Btn_minimize.FlatAppearance.BorderSize = 0;
+            this.Btn_minimize.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.Btn_minimize.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.Btn_minimize.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Btn_minimize.ForeColor = System.Drawing.Color.Black;
+            this.Btn_minimize.Location = new System.Drawing.Point(801, -1);
+            this.Btn_minimize.Name = "Btn_minimize";
+            this.Btn_minimize.Size = new System.Drawing.Size(46, 23);
+            this.Btn_minimize.TabIndex = 5;
+            this.Btn_minimize.Text = "-";
+            this.Btn_minimize.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.Btn_minimize.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
+            this.Btn_minimize.UseVisualStyleBackColor = false;
+            this.Btn_minimize.Click += new System.EventHandler(this.Btn_minimize_Click);
+            // 
+            // Btn_close
+            // 
+            this.Btn_close.BackColor = System.Drawing.SystemColors.Control;
+            this.Btn_close.FlatAppearance.BorderSize = 0;
+            this.Btn_close.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Red;
+            this.Btn_close.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(145)))), ((int)(((byte)(148)))));
+            this.Btn_close.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Btn_close.ForeColor = System.Drawing.Color.Black;
+            this.Btn_close.Location = new System.Drawing.Point(848, -1);
+            this.Btn_close.Name = "Btn_close";
+            this.Btn_close.Size = new System.Drawing.Size(46, 23);
+            this.Btn_close.TabIndex = 4;
+            this.Btn_close.Text = "X";
+            this.Btn_close.UseVisualStyleBackColor = false;
+            this.Btn_close.Click += new System.EventHandler(this.Btn_close_Click);
             // 
             // Lbl_pontuacao
             // 
@@ -279,6 +313,65 @@
             this.label6.TabIndex = 9;
             this.label6.Text = "Pressione jogar para responder perguntas sobre armamento";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // panel4
+            // 
+            this.panel4.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.panel4.Controls.Add(this.pictureBox6);
+            this.panel4.Controls.Add(this.label21);
+            this.panel4.Controls.Add(this.button3);
+            this.panel4.Controls.Add(this.label22);
+            this.panel4.Location = new System.Drawing.Point(225, 64);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(210, 312);
+            this.panel4.TabIndex = 14;
+            // 
+            // pictureBox6
+            // 
+            this.pictureBox6.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox6.BackgroundImage")));
+            this.pictureBox6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBox6.Location = new System.Drawing.Point(30, 40);
+            this.pictureBox6.Name = "pictureBox6";
+            this.pictureBox6.Size = new System.Drawing.Size(152, 143);
+            this.pictureBox6.TabIndex = 11;
+            this.pictureBox6.TabStop = false;
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.Font = new System.Drawing.Font("MS Reference Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label21.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.label21.Location = new System.Drawing.Point(39, 11);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(134, 24);
+            this.label21.TabIndex = 0;
+            this.label21.Text = "ARMAMENTO";
+            // 
+            // button3
+            // 
+            this.button3.Enabled = false;
+            this.button3.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.button3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(201)))), ((int)(((byte)(201)))), ((int)(((byte)(201)))));
+            this.button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.button3.Location = new System.Drawing.Point(50, 262);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(113, 34);
+            this.button3.TabIndex = 8;
+            this.button3.Text = "Jogar";
+            this.button3.UseVisualStyleBackColor = true;
+            // 
+            // label22
+            // 
+            this.label22.AutoSize = true;
+            this.label22.Location = new System.Drawing.Point(30, 186);
+            this.label22.MaximumSize = new System.Drawing.Size(160, 0);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(152, 57);
+            this.label22.TabIndex = 9;
+            this.label22.Text = "Você já respondeu todas as perguntas desse tópico";
+            this.label22.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // Btn_prox
             // 
@@ -398,6 +491,65 @@
             this.label8.Text = "Pressione jogar para responder perguntas sobre história\r\n";
             this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // panel2
+            // 
+            this.panel2.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.panel2.Controls.Add(this.label4);
+            this.panel2.Controls.Add(this.pictureBox4);
+            this.panel2.Controls.Add(this.button1);
+            this.panel2.Controls.Add(this.label17);
+            this.panel2.Location = new System.Drawing.Point(225, 64);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(210, 312);
+            this.panel2.TabIndex = 12;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("MS Reference Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.label4.Location = new System.Drawing.Point(53, 11);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(106, 24);
+            this.label4.TabIndex = 0;
+            this.label4.Text = "HISTÓRIA";
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox4.BackgroundImage")));
+            this.pictureBox4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBox4.Location = new System.Drawing.Point(30, 38);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(152, 143);
+            this.pictureBox4.TabIndex = 10;
+            this.pictureBox4.TabStop = false;
+            // 
+            // button1
+            // 
+            this.button1.Enabled = false;
+            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(201)))), ((int)(((byte)(201)))), ((int)(((byte)(201)))));
+            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.button1.Location = new System.Drawing.Point(50, 262);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(113, 34);
+            this.button1.TabIndex = 8;
+            this.button1.Text = "Jogar";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Location = new System.Drawing.Point(30, 186);
+            this.label17.MaximumSize = new System.Drawing.Size(160, 0);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(152, 57);
+            this.label17.TabIndex = 9;
+            this.label17.Text = "Você já respondeu todas as perguntas desse tópico";
+            this.label17.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // Pn_veiculos
             // 
             this.Pn_veiculos.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
@@ -468,6 +620,65 @@
             this.label10.Text = "Pressione jogar para responder perguntas sobre veículos\r\n\r\n";
             this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // panel3
+            // 
+            this.panel3.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.panel3.Controls.Add(this.pictureBox5);
+            this.panel3.Controls.Add(this.label18);
+            this.panel3.Controls.Add(this.button2);
+            this.panel3.Controls.Add(this.label19);
+            this.panel3.Location = new System.Drawing.Point(225, 64);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(210, 312);
+            this.panel3.TabIndex = 13;
+            // 
+            // pictureBox5
+            // 
+            this.pictureBox5.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox5.BackgroundImage")));
+            this.pictureBox5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBox5.Location = new System.Drawing.Point(30, 37);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(152, 143);
+            this.pictureBox5.TabIndex = 11;
+            this.pictureBox5.TabStop = false;
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Font = new System.Drawing.Font("MS Reference Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label18.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.label18.Location = new System.Drawing.Point(52, 11);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(109, 24);
+            this.label18.TabIndex = 0;
+            this.label18.Text = "VEÍCULOS";
+            // 
+            // button2
+            // 
+            this.button2.Enabled = false;
+            this.button2.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.button2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(201)))), ((int)(((byte)(201)))), ((int)(((byte)(201)))));
+            this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.button2.Location = new System.Drawing.Point(50, 262);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(113, 34);
+            this.button2.TabIndex = 8;
+            this.button2.Text = "Jogar";
+            this.button2.UseVisualStyleBackColor = true;
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Location = new System.Drawing.Point(30, 186);
+            this.label19.MaximumSize = new System.Drawing.Size(160, 0);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(152, 57);
+            this.label19.TabIndex = 9;
+            this.label19.Text = "Você já respondeu todas as perguntas desse tópico";
+            this.label19.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // Pn_inicio
             // 
             this.Pn_inicio.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
@@ -478,6 +689,7 @@
             this.Pn_inicio.Name = "Pn_inicio";
             this.Pn_inicio.Size = new System.Drawing.Size(670, 487);
             this.Pn_inicio.TabIndex = 13;
+            this.Pn_inicio.Paint += new System.Windows.Forms.PaintEventHandler(this.Pn_inicio_Paint);
             // 
             // panel1
             // 
@@ -537,40 +749,6 @@
             this.label11.TabIndex = 0;
             this.label11.Text = "INÍCIO";
             // 
-            // Btn_close
-            // 
-            this.Btn_close.BackColor = System.Drawing.SystemColors.Control;
-            this.Btn_close.FlatAppearance.BorderSize = 0;
-            this.Btn_close.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Red;
-            this.Btn_close.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(145)))), ((int)(((byte)(148)))));
-            this.Btn_close.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Btn_close.ForeColor = System.Drawing.Color.Black;
-            this.Btn_close.Location = new System.Drawing.Point(848, -1);
-            this.Btn_close.Name = "Btn_close";
-            this.Btn_close.Size = new System.Drawing.Size(46, 23);
-            this.Btn_close.TabIndex = 4;
-            this.Btn_close.Text = "X";
-            this.Btn_close.UseVisualStyleBackColor = false;
-            this.Btn_close.Click += new System.EventHandler(this.Btn_close_Click);
-            // 
-            // Btn_minimize
-            // 
-            this.Btn_minimize.BackColor = System.Drawing.SystemColors.Control;
-            this.Btn_minimize.FlatAppearance.BorderSize = 0;
-            this.Btn_minimize.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.Btn_minimize.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.Btn_minimize.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Btn_minimize.ForeColor = System.Drawing.Color.Black;
-            this.Btn_minimize.Location = new System.Drawing.Point(801, -1);
-            this.Btn_minimize.Name = "Btn_minimize";
-            this.Btn_minimize.Size = new System.Drawing.Size(46, 23);
-            this.Btn_minimize.TabIndex = 5;
-            this.Btn_minimize.Text = "-";
-            this.Btn_minimize.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.Btn_minimize.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
-            this.Btn_minimize.UseVisualStyleBackColor = false;
-            this.Btn_minimize.Click += new System.EventHandler(this.Btn_minimize_Click);
-            // 
             // Pn_perguntas
             // 
             this.Pn_perguntas.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
@@ -588,46 +766,27 @@
             this.Pn_perguntas.TabIndex = 13;
             this.Pn_perguntas.Visible = false;
             // 
-            // Lbl_pergunta
+            // Lbl_topico
             // 
-            this.Lbl_pergunta.AutoSize = true;
-            this.Lbl_pergunta.Location = new System.Drawing.Point(24, 77);
-            this.Lbl_pergunta.MaximumSize = new System.Drawing.Size(619, 0);
-            this.Lbl_pergunta.Name = "Lbl_pergunta";
-            this.Lbl_pergunta.Size = new System.Drawing.Size(75, 19);
-            this.Lbl_pergunta.TabIndex = 0;
-            this.Lbl_pergunta.Text = "Pergunta";
-            this.Lbl_pergunta.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.Lbl_topico.AutoSize = true;
+            this.Lbl_topico.Font = new System.Drawing.Font("MS Reference Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Lbl_topico.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.Lbl_topico.Location = new System.Drawing.Point(339, 19);
+            this.Lbl_topico.Name = "Lbl_topico";
+            this.Lbl_topico.Size = new System.Drawing.Size(73, 19);
+            this.Lbl_topico.TabIndex = 6;
+            this.Lbl_topico.Text = "TÓPICO";
             // 
-            // Btn_alternativa3
+            // label3
             // 
-            this.Btn_alternativa3.BackColor = System.Drawing.Color.White;
-            this.Btn_alternativa3.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.Btn_alternativa3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(201)))), ((int)(((byte)(201)))), ((int)(((byte)(201)))));
-            this.Btn_alternativa3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.Btn_alternativa3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Btn_alternativa3.Location = new System.Drawing.Point(24, 345);
-            this.Btn_alternativa3.Name = "Btn_alternativa3";
-            this.Btn_alternativa3.Size = new System.Drawing.Size(304, 73);
-            this.Btn_alternativa3.TabIndex = 1;
-            this.Btn_alternativa3.Text = "Alternativa 3";
-            this.Btn_alternativa3.UseVisualStyleBackColor = false;
-            this.Btn_alternativa3.Click += new System.EventHandler(this.Btn_alternativa3_Click);
-            // 
-            // Btn_alternativa4
-            // 
-            this.Btn_alternativa4.BackColor = System.Drawing.Color.White;
-            this.Btn_alternativa4.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.Btn_alternativa4.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(201)))), ((int)(((byte)(201)))), ((int)(((byte)(201)))));
-            this.Btn_alternativa4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.Btn_alternativa4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Btn_alternativa4.Location = new System.Drawing.Point(339, 345);
-            this.Btn_alternativa4.Name = "Btn_alternativa4";
-            this.Btn_alternativa4.Size = new System.Drawing.Size(304, 73);
-            this.Btn_alternativa4.TabIndex = 2;
-            this.Btn_alternativa4.Text = "Alternativa 4";
-            this.Btn_alternativa4.UseVisualStyleBackColor = false;
-            this.Btn_alternativa4.Click += new System.EventHandler(this.Btn_alternativa4_Click);
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("MS Reference Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.label3.Location = new System.Drawing.Point(28, 19);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(318, 19);
+            this.label3.TabIndex = 5;
+            this.label3.Text = "Você está respondendo perguntas sobre:";
             // 
             // Btn_alternativa2
             // 
@@ -659,27 +818,46 @@
             this.Btn_alternativa1.UseVisualStyleBackColor = false;
             this.Btn_alternativa1.Click += new System.EventHandler(this.Btn_alternativa1_Click);
             // 
-            // label3
+            // Btn_alternativa4
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("MS Reference Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label3.Location = new System.Drawing.Point(28, 19);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(318, 19);
-            this.label3.TabIndex = 5;
-            this.label3.Text = "Você está respondendo perguntas sobre:";
+            this.Btn_alternativa4.BackColor = System.Drawing.Color.White;
+            this.Btn_alternativa4.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.Btn_alternativa4.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(201)))), ((int)(((byte)(201)))), ((int)(((byte)(201)))));
+            this.Btn_alternativa4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.Btn_alternativa4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Btn_alternativa4.Location = new System.Drawing.Point(339, 345);
+            this.Btn_alternativa4.Name = "Btn_alternativa4";
+            this.Btn_alternativa4.Size = new System.Drawing.Size(304, 73);
+            this.Btn_alternativa4.TabIndex = 2;
+            this.Btn_alternativa4.Text = "Alternativa 4";
+            this.Btn_alternativa4.UseVisualStyleBackColor = false;
+            this.Btn_alternativa4.Click += new System.EventHandler(this.Btn_alternativa4_Click);
             // 
-            // Lbl_topico
+            // Btn_alternativa3
             // 
-            this.Lbl_topico.AutoSize = true;
-            this.Lbl_topico.Font = new System.Drawing.Font("MS Reference Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Lbl_topico.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.Lbl_topico.Location = new System.Drawing.Point(339, 19);
-            this.Lbl_topico.Name = "Lbl_topico";
-            this.Lbl_topico.Size = new System.Drawing.Size(73, 19);
-            this.Lbl_topico.TabIndex = 6;
-            this.Lbl_topico.Text = "TÓPICO";
+            this.Btn_alternativa3.BackColor = System.Drawing.Color.White;
+            this.Btn_alternativa3.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.Btn_alternativa3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(201)))), ((int)(((byte)(201)))), ((int)(((byte)(201)))));
+            this.Btn_alternativa3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.Btn_alternativa3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Btn_alternativa3.Location = new System.Drawing.Point(24, 345);
+            this.Btn_alternativa3.Name = "Btn_alternativa3";
+            this.Btn_alternativa3.Size = new System.Drawing.Size(304, 73);
+            this.Btn_alternativa3.TabIndex = 1;
+            this.Btn_alternativa3.Text = "Alternativa 3";
+            this.Btn_alternativa3.UseVisualStyleBackColor = false;
+            this.Btn_alternativa3.Click += new System.EventHandler(this.Btn_alternativa3_Click);
+            // 
+            // Lbl_pergunta
+            // 
+            this.Lbl_pergunta.AutoSize = true;
+            this.Lbl_pergunta.Location = new System.Drawing.Point(24, 77);
+            this.Lbl_pergunta.MaximumSize = new System.Drawing.Size(619, 0);
+            this.Lbl_pergunta.Name = "Lbl_pergunta";
+            this.Lbl_pergunta.Size = new System.Drawing.Size(75, 19);
+            this.Lbl_pergunta.TabIndex = 0;
+            this.Lbl_pergunta.Text = "Pergunta";
+            this.Lbl_pergunta.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // Pn_fim
             // 
@@ -711,183 +889,6 @@
             this.label20.Size = new System.Drawing.Size(45, 24);
             this.label20.TabIndex = 0;
             this.label20.Text = "FIM";
-            // 
-            // panel2
-            // 
-            this.panel2.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.panel2.Controls.Add(this.label4);
-            this.panel2.Controls.Add(this.pictureBox4);
-            this.panel2.Controls.Add(this.button1);
-            this.panel2.Controls.Add(this.label17);
-            this.panel2.Location = new System.Drawing.Point(225, 64);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(210, 312);
-            this.panel2.TabIndex = 12;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("MS Reference Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.label4.Location = new System.Drawing.Point(53, 11);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(106, 24);
-            this.label4.TabIndex = 0;
-            this.label4.Text = "HISTÓRIA";
-            // 
-            // pictureBox4
-            // 
-            this.pictureBox4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox4.BackgroundImage")));
-            this.pictureBox4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox4.Location = new System.Drawing.Point(30, 38);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(152, 143);
-            this.pictureBox4.TabIndex = 10;
-            this.pictureBox4.TabStop = false;
-            // 
-            // button1
-            // 
-            this.button1.Enabled = false;
-            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(201)))), ((int)(((byte)(201)))), ((int)(((byte)(201)))));
-            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.button1.Location = new System.Drawing.Point(50, 262);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(113, 34);
-            this.button1.TabIndex = 8;
-            this.button1.Text = "Jogar";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // label17
-            // 
-            this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(30, 186);
-            this.label17.MaximumSize = new System.Drawing.Size(160, 0);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(152, 57);
-            this.label17.TabIndex = 9;
-            this.label17.Text = "Você já respondeu todas as perguntas desse tópico";
-            this.label17.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // panel3
-            // 
-            this.panel3.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.panel3.Controls.Add(this.pictureBox5);
-            this.panel3.Controls.Add(this.label18);
-            this.panel3.Controls.Add(this.button2);
-            this.panel3.Controls.Add(this.label19);
-            this.panel3.Location = new System.Drawing.Point(225, 64);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(210, 312);
-            this.panel3.TabIndex = 13;
-            // 
-            // label18
-            // 
-            this.label18.AutoSize = true;
-            this.label18.Font = new System.Drawing.Font("MS Reference Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label18.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.label18.Location = new System.Drawing.Point(52, 11);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(109, 24);
-            this.label18.TabIndex = 0;
-            this.label18.Text = "VEÍCULOS";
-            // 
-            // button2
-            // 
-            this.button2.Enabled = false;
-            this.button2.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.button2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(201)))), ((int)(((byte)(201)))), ((int)(((byte)(201)))));
-            this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.button2.Location = new System.Drawing.Point(50, 262);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(113, 34);
-            this.button2.TabIndex = 8;
-            this.button2.Text = "Jogar";
-            this.button2.UseVisualStyleBackColor = true;
-            // 
-            // label19
-            // 
-            this.label19.AutoSize = true;
-            this.label19.Location = new System.Drawing.Point(30, 186);
-            this.label19.MaximumSize = new System.Drawing.Size(160, 0);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(152, 57);
-            this.label19.TabIndex = 9;
-            this.label19.Text = "Você já respondeu todas as perguntas desse tópico";
-            this.label19.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // pictureBox5
-            // 
-            this.pictureBox5.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox5.BackgroundImage")));
-            this.pictureBox5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox5.Location = new System.Drawing.Point(30, 37);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(152, 143);
-            this.pictureBox5.TabIndex = 11;
-            this.pictureBox5.TabStop = false;
-            // 
-            // panel4
-            // 
-            this.panel4.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.panel4.Controls.Add(this.pictureBox6);
-            this.panel4.Controls.Add(this.label21);
-            this.panel4.Controls.Add(this.button3);
-            this.panel4.Controls.Add(this.label22);
-            this.panel4.Location = new System.Drawing.Point(225, 64);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(210, 312);
-            this.panel4.TabIndex = 14;
-            // 
-            // label21
-            // 
-            this.label21.AutoSize = true;
-            this.label21.Font = new System.Drawing.Font("MS Reference Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label21.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.label21.Location = new System.Drawing.Point(39, 11);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(134, 24);
-            this.label21.TabIndex = 0;
-            this.label21.Text = "ARMAMENTO";
-            // 
-            // button3
-            // 
-            this.button3.Enabled = false;
-            this.button3.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.button3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(201)))), ((int)(((byte)(201)))), ((int)(((byte)(201)))));
-            this.button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.button3.Location = new System.Drawing.Point(50, 262);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(113, 34);
-            this.button3.TabIndex = 8;
-            this.button3.Text = "Jogar";
-            this.button3.UseVisualStyleBackColor = true;
-            // 
-            // label22
-            // 
-            this.label22.AutoSize = true;
-            this.label22.Location = new System.Drawing.Point(30, 186);
-            this.label22.MaximumSize = new System.Drawing.Size(160, 0);
-            this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(152, 57);
-            this.label22.TabIndex = 9;
-            this.label22.Text = "Você já respondeu todas as perguntas desse tópico";
-            this.label22.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // pictureBox6
-            // 
-            this.pictureBox6.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox6.BackgroundImage")));
-            this.pictureBox6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox6.Location = new System.Drawing.Point(30, 40);
-            this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(152, 143);
-            this.pictureBox6.TabIndex = 11;
-            this.pictureBox6.TabStop = false;
             // 
             // Principal
             // 
@@ -921,14 +922,23 @@
             this.Pn_playarmamento.ResumeLayout(false);
             this.Pn_playarmamento.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.panel4.ResumeLayout(false);
+            this.panel4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             this.Pn_historia.ResumeLayout(false);
             this.Pn_playhistoria.ResumeLayout(false);
             this.Pn_playhistoria.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.Pn_veiculos.ResumeLayout(false);
             this.Pn_playveiculos.ResumeLayout(false);
             this.Pn_playveiculos.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             this.Pn_inicio.ResumeLayout(false);
             this.Pn_inicio.PerformLayout();
             this.panel1.ResumeLayout(false);
@@ -937,15 +947,6 @@
             this.Pn_perguntas.PerformLayout();
             this.Pn_fim.ResumeLayout(false);
             this.Pn_fim.PerformLayout();
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            this.panel3.ResumeLayout(false);
-            this.panel3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
-            this.panel4.ResumeLayout(false);
-            this.panel4.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             this.ResumeLayout(false);
 
         }
