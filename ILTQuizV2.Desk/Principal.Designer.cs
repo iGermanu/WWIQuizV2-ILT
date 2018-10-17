@@ -689,7 +689,6 @@
             this.Pn_inicio.Name = "Pn_inicio";
             this.Pn_inicio.Size = new System.Drawing.Size(670, 487);
             this.Pn_inicio.TabIndex = 13;
-            this.Pn_inicio.Paint += new System.Windows.Forms.PaintEventHandler(this.Pn_inicio_Paint);
             // 
             // panel1
             // 
@@ -801,7 +800,7 @@
             this.Btn_alternativa2.TabIndex = 4;
             this.Btn_alternativa2.Text = "Alternativa 2";
             this.Btn_alternativa2.UseVisualStyleBackColor = false;
-            this.Btn_alternativa2.Click += new System.EventHandler(this.Btn_alternativa2_Click);
+            this.Btn_alternativa2.Click += new System.EventHandler(this.Btn_alternativa1_Click);
             // 
             // Btn_alternativa1
             // 
@@ -831,7 +830,7 @@
             this.Btn_alternativa4.TabIndex = 2;
             this.Btn_alternativa4.Text = "Alternativa 4";
             this.Btn_alternativa4.UseVisualStyleBackColor = false;
-            this.Btn_alternativa4.Click += new System.EventHandler(this.Btn_alternativa4_Click);
+            this.Btn_alternativa4.Click += new System.EventHandler(this.Btn_alternativa1_Click);
             // 
             // Btn_alternativa3
             // 
@@ -846,7 +845,7 @@
             this.Btn_alternativa3.TabIndex = 1;
             this.Btn_alternativa3.Text = "Alternativa 3";
             this.Btn_alternativa3.UseVisualStyleBackColor = false;
-            this.Btn_alternativa3.Click += new System.EventHandler(this.Btn_alternativa3_Click);
+            this.Btn_alternativa3.Click += new System.EventHandler(this.Btn_alternativa1_Click);
             // 
             // Lbl_pergunta
             // 

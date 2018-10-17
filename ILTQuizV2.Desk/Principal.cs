@@ -366,20 +366,6 @@ namespace ILTQuizV2.Desk
             VerificarAlternativa((Button)sender);
         }
 
-        private void Btn_alternativa2_Click(object sender, EventArgs e)
-        {
-            VerificarAlternativa((Button)sender);
-        }
-
-        private void Btn_alternativa3_Click(object sender, EventArgs e)
-        {
-            VerificarAlternativa((Button)sender);
-        }
-
-        private void Btn_alternativa4_Click(object sender, EventArgs e)
-        {
-            VerificarAlternativa((Button)sender);
-        }
         #endregion
 
         #region BOTÕES DE BAIXO
@@ -440,10 +426,5 @@ namespace ILTQuizV2.Desk
             MessageBox.Show(dica, "Dica", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
         #endregion
-
-        private void Pn_inicio_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
     }
 }
