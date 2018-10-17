@@ -95,6 +95,34 @@ namespace ILTQuizV2.Desk
             }
         }
 
+        public void PuxarResposta()
+        {
+            string resposta = "SELECT resposta FROM resposta ";
+            resposta += "WHERE id_resp = " + id_resp;
+            DataSet resultado = _database.Search(resposta);
+            resposta = resultado.Tables["tbl_resultado"].Rows[0]["resposta"].ToString();
+            Btn_alternativa1.Text = resposta;
+            id_resp++;
+            resposta = "SELECT resposta FROM resposta ";
+            resposta += "WHERE id_resp = " + id_resp;
+            resultado = _database.Search(resposta);
+            resposta = resultado.Tables["tbl_resultado"].Rows[0]["resposta"].ToString();
+            Btn_alternativa2.Text = resposta;
+            id_resp++;
+            resposta = "SELECT resposta FROM resposta ";
+            resposta += "WHERE id_resp = " + id_resp;
+            resultado = _database.Search(resposta);
+            resposta = resultado.Tables["tbl_resultado"].Rows[0]["resposta"].ToString();
+            Btn_alternativa3.Text = resposta;
+            id_resp++;
+            resposta = "SELECT resposta FROM resposta ";
+            resposta += "WHERE id_resp = " + id_resp;
+            resultado = _database.Search(resposta);
+            resposta = resultado.Tables["tbl_resultado"].Rows[0]["resposta"].ToString();
+            Btn_alternativa4.Text = resposta;
+            id_resp++;
+        }
+
         public void PrepararPergunta(string Topico, int Categoria)
         {
             AtivarBotoes(false);
@@ -102,14 +130,10 @@ namespace ILTQuizV2.Desk
             categoriaatual = Categoria;
 
             // PUXA A PERGUNTA DO BANCO DE DADOS
-            string perg = "SELECT id_perg FROM pergunta ";
+            string perg = "SELECT id_perg, pergunta FROM pergunta ";
             perg += "WHERE id_perg = (SELECT MIN(id_perg) FROM pergunta WHERE categoria = " + Categoria + ")";
             DataSet resultado = _database.Search(perg);
             id_pergatual = Convert.ToInt32(resultado.Tables["tbl_resultado"].Rows[0]["id_perg"]);
-
-            perg = "SELECT pergunta FROM pergunta ";
-            perg += "WHERE id_perg = " + id_pergatual;
-            resultado = _database.Search(perg);
             string pergunta = resultado.Tables["tbl_resultado"].Rows[0]["pergunta"].ToString();
             Lbl_pergunta.Text = pergunta;
 
@@ -119,31 +143,7 @@ namespace ILTQuizV2.Desk
             resultado = _database.Search(resp);
             resp = resultado.Tables["tbl_resultado"].Rows[0]["id_resp"].ToString();
             id_resp = Convert.ToInt32(resp);
-
-            string resposta1 = "SELECT resposta FROM resposta ";
-            resposta1 += "WHERE id_resp = " + id_resp;
-            resultado = _database.Search(resposta1);
-            resposta1 = resultado.Tables["tbl_resultado"].Rows[0]["resposta"].ToString();
-            id_resp++;
-            string resposta2 = "SELECT resposta FROM resposta ";
-            resposta2 += "WHERE id_resp = " + id_resp;
-            resultado = _database.Search(resposta2);
-            resposta2 = resultado.Tables["tbl_resultado"].Rows[0]["resposta"].ToString();
-            id_resp++;
-            string resposta3 = "SELECT resposta FROM resposta ";
-            resposta3 += "WHERE id_resp = " + id_resp;
-            resultado = _database.Search(resposta3);
-            resposta3 = resultado.Tables["tbl_resultado"].Rows[0]["resposta"].ToString();
-            id_resp++;
-            string resposta4 = "SELECT resposta FROM resposta ";
-            resposta4 += "WHERE id_resp = " + id_resp;
-            resultado = _database.Search(resposta4);
-            resposta4 = resultado.Tables["tbl_resultado"].Rows[0]["resposta"].ToString();
-
-            Btn_alternativa1.Text = resposta1;
-            Btn_alternativa2.Text = resposta2;
-            Btn_alternativa3.Text = resposta3;
-            Btn_alternativa4.Text = resposta4;
+            PuxarResposta();
 
             Pn_perguntas.Visible = true;
         }
@@ -239,35 +239,7 @@ namespace ILTQuizV2.Desk
                 Lbl_pergunta.Text = pergunta;
 
                 //PUXA RESPOSTAS
-                id_resp++;
-                string resposta1 = "SELECT resposta FROM resposta ";
-                resposta1 += "WHERE id_resp = " + id_resp;
-                resultado = _database.Search(resposta1);
-                resposta1 = resultado.Tables["tbl_resultado"].Rows[0]["resposta"].ToString();
-
-                id_resp++;
-                string resposta2 = "SELECT resposta FROM resposta ";
-                resposta2 += "WHERE id_resp = " + id_resp;
-                resultado = _database.Search(resposta2);
-                resposta2 = resultado.Tables["tbl_resultado"].Rows[0]["resposta"].ToString();
-
-                id_resp++;
-                string resposta3 = "SELECT resposta FROM resposta ";
-                resposta3 += "WHERE id_resp = " + id_resp;
-                resultado = _database.Search(resposta3);
-                resposta3 = resultado.Tables["tbl_resultado"].Rows[0]["resposta"].ToString();
-
-                id_resp++;
-                string resposta4 = "SELECT resposta FROM resposta ";
-                resposta4 += "WHERE id_resp = " + id_resp;
-                resultado = _database.Search(resposta4);
-                resposta4 = resultado.Tables["tbl_resultado"].Rows[0]["resposta"].ToString();
-
-                Btn_alternativa1.Text = resposta1;
-                Btn_alternativa2.Text = resposta2;
-                Btn_alternativa3.Text = resposta3;
-                Btn_alternativa4.Text = resposta4;
-
+                PuxarResposta();
                 BottomButtons(true);
             }
             else
@@ -394,20 +366,6 @@ namespace ILTQuizV2.Desk
             VerificarAlternativa((Button)sender);
         }
 
-        private void Btn_alternativa2_Click(object sender, EventArgs e)
-        {
-            VerificarAlternativa((Button)sender);
-        }
-
-        private void Btn_alternativa3_Click(object sender, EventArgs e)
-        {
-            VerificarAlternativa((Button)sender);
-        }
-
-        private void Btn_alternativa4_Click(object sender, EventArgs e)
-        {
-            VerificarAlternativa((Button)sender);
-        }
         #endregion
 
         #region BOTÕES DE BAIXO
@@ -436,35 +394,7 @@ namespace ILTQuizV2.Desk
                 Lbl_pergunta.Text = pergunta;
 
                 //PUXA RESPOSTAS
-                id_resp++;
-                string resposta1 = "SELECT resposta FROM resposta ";
-                resposta1 += "WHERE id_resp = " + id_resp;
-                resultado = _database.Search(resposta1);
-                resposta1 = resultado.Tables["tbl_resultado"].Rows[0]["resposta"].ToString();
-
-                id_resp++;
-                string resposta2 = "SELECT resposta FROM resposta ";
-                resposta2 += "WHERE id_resp = " + id_resp;
-                resultado = _database.Search(resposta2);
-                resposta2 = resultado.Tables["tbl_resultado"].Rows[0]["resposta"].ToString();
-
-                id_resp++;
-                string resposta3 = "SELECT resposta FROM resposta ";
-                resposta3 += "WHERE id_resp = " + id_resp;
-                resultado = _database.Search(resposta3);
-                resposta3 = resultado.Tables["tbl_resultado"].Rows[0]["resposta"].ToString();
-
-                id_resp++;
-                string resposta4 = "SELECT resposta FROM resposta ";
-                resposta4 += "WHERE id_resp = " + id_resp;
-                resultado = _database.Search(resposta4);
-                resposta4 = resultado.Tables["tbl_resultado"].Rows[0]["resposta"].ToString();
-
-                Btn_alternativa1.Text = resposta1;
-                Btn_alternativa2.Text = resposta2;
-                Btn_alternativa3.Text = resposta3;
-                Btn_alternativa4.Text = resposta4;
-
+                PuxarResposta();
                 BottomButtons(true);
             }
             else
