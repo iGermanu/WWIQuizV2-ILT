@@ -68,11 +68,36 @@ namespace ILTQuizV2.Desk
             }
             catch (MySqlException erro)
             {
-                throw new Exception(erro.Message);
+                _dados = null;
+                return _dados;
             }
             finally
             {
+                
+            }
+        }
 
+        public void Inserir(string strSQL)
+        {
+
+            try
+            {
+                if (_conexao.State.Equals(ConnectionState.Closed))
+                {
+                    _conexao.Open();
+                }
+
+                _comando = _conexao.CreateCommand();
+                _comando.CommandText = strSQL;
+
+                if (_comando.ExecuteNonQuery() != 1)
+                {
+                    throw new Exception("Falha ao inserir");
+                }
+            }
+            catch (MySqlException erro)
+            {
+                throw new Exception("Erro ao inserir: " + erro.Message);
             }
         }
         #endregion

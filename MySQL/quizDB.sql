@@ -16,6 +16,12 @@ CREATE TABLE IF NOT EXISTS resposta (
     correta BOOL
 );
 
+CREATE TABLE IF NOT EXISTS partida (
+	id_partida INT UNSIGNED NOT NULL PRIMARY KEY AUTO_INCREMENT,
+    pontuacao INT,
+    nickname VARCHAR(15)
+);
+
 INSERT INTO pergunta (id_perg, pergunta, categoria, dica) VALUES 
 (10, 'Qual das seguintes ferramentas também eram utilizadas como arma branca?', 1, 'Não era o capacete e nem a matraca'),
 (11, 'Onde, principalmente, eram utilizados os morteiros?', 1, 'Era um lugar protegido e não era em veículos'),

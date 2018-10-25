@@ -92,6 +92,16 @@
             this.Pn_fim = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
+            this.Btn_logar = new System.Windows.Forms.Button();
+            this.label16 = new System.Windows.Forms.Label();
+            this.Lbl_logado = new System.Windows.Forms.Label();
+            this.label24 = new System.Windows.Forms.Label();
+            this.Pn_login = new System.Windows.Forms.Panel();
+            this.label23 = new System.Windows.Forms.Label();
+            this.label25 = new System.Windows.Forms.Label();
+            this.Txt_login = new System.Windows.Forms.TextBox();
+            this.Btn_login = new System.Windows.Forms.Button();
+            this.label26 = new System.Windows.Forms.Label();
             this.Pn_top.SuspendLayout();
             this.Pn_armamento.SuspendLayout();
             this.Pn_playarmamento.SuspendLayout();
@@ -112,6 +122,7 @@
             this.panel1.SuspendLayout();
             this.Pn_perguntas.SuspendLayout();
             this.Pn_fim.SuspendLayout();
+            this.Pn_login.SuspendLayout();
             this.SuspendLayout();
             // 
             // Btn_inicio
@@ -889,11 +900,130 @@
             this.label20.TabIndex = 0;
             this.label20.Text = "FIM";
             // 
+            // Btn_logar
+            // 
+            this.Btn_logar.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.Btn_logar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(201)))), ((int)(((byte)(201)))), ((int)(((byte)(201)))));
+            this.Btn_logar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.Btn_logar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Btn_logar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.Btn_logar.Location = new System.Drawing.Point(12, 555);
+            this.Btn_logar.Name = "Btn_logar";
+            this.Btn_logar.Size = new System.Drawing.Size(81, 29);
+            this.Btn_logar.TabIndex = 15;
+            this.Btn_logar.Text = "Logar";
+            this.Btn_logar.UseVisualStyleBackColor = true;
+            this.Btn_logar.Click += new System.EventHandler(this.Btn_logar_Click);
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.ForeColor = System.Drawing.Color.Black;
+            this.label16.Location = new System.Drawing.Point(94, 560);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(119, 19);
+            this.label16.TabIndex = 16;
+            this.label16.Text = "Logado como:";
+            // 
+            // Lbl_logado
+            // 
+            this.Lbl_logado.AutoSize = true;
+            this.Lbl_logado.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.Lbl_logado.Location = new System.Drawing.Point(206, 560);
+            this.Lbl_logado.Name = "Lbl_logado";
+            this.Lbl_logado.Size = new System.Drawing.Size(94, 19);
+            this.Lbl_logado.TabIndex = 17;
+            this.Lbl_logado.Text = "Não logado";
+            // 
+            // label24
+            // 
+            this.label24.AutoSize = true;
+            this.label24.ForeColor = System.Drawing.Color.Gray;
+            this.label24.Location = new System.Drawing.Point(390, 560);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(490, 19);
+            this.label24.TabIndex = 18;
+            this.label24.Text = "Created by: Vitor G. - Henrik Ruan - Lucas Henrique - Aline Alves";
+            this.label24.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // Pn_login
+            // 
+            this.Pn_login.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.Pn_login.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.Pn_login.Controls.Add(this.label26);
+            this.Pn_login.Controls.Add(this.Btn_login);
+            this.Pn_login.Controls.Add(this.Txt_login);
+            this.Pn_login.Controls.Add(this.label25);
+            this.Pn_login.Controls.Add(this.label23);
+            this.Pn_login.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.Pn_login.Location = new System.Drawing.Point(210, 62);
+            this.Pn_login.Name = "Pn_login";
+            this.Pn_login.Size = new System.Drawing.Size(670, 487);
+            this.Pn_login.TabIndex = 14;
+            this.Pn_login.Visible = false;
+            // 
+            // label23
+            // 
+            this.label23.AutoSize = true;
+            this.label23.Font = new System.Drawing.Font("MS Reference Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label23.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.label23.Location = new System.Drawing.Point(172, 146);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(357, 24);
+            this.label23.TabIndex = 1;
+            this.label23.Text = "Logue-se para salvar sua pontuação";
+            // 
+            // label25
+            // 
+            this.label25.AutoSize = true;
+            this.label25.Location = new System.Drawing.Point(213, 192);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(94, 19);
+            this.label25.TabIndex = 2;
+            this.label25.Text = "Nickname: ";
+            // 
+            // Txt_login
+            // 
+            this.Txt_login.Location = new System.Drawing.Point(297, 189);
+            this.Txt_login.Name = "Txt_login";
+            this.Txt_login.Size = new System.Drawing.Size(147, 26);
+            this.Txt_login.TabIndex = 3;
+            // 
+            // Btn_login
+            // 
+            this.Btn_login.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.Btn_login.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(201)))), ((int)(((byte)(201)))), ((int)(((byte)(201)))));
+            this.Btn_login.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.Btn_login.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Btn_login.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.Btn_login.Location = new System.Drawing.Point(217, 221);
+            this.Btn_login.Name = "Btn_login";
+            this.Btn_login.Size = new System.Drawing.Size(227, 29);
+            this.Btn_login.TabIndex = 19;
+            this.Btn_login.Text = "Logar / Registrar";
+            this.Btn_login.UseVisualStyleBackColor = true;
+            this.Btn_login.Click += new System.EventHandler(this.Btn_login_Click);
+            // 
+            // label26
+            // 
+            this.label26.AutoSize = true;
+            this.label26.ForeColor = System.Drawing.Color.DarkRed;
+            this.label26.Location = new System.Drawing.Point(145, 269);
+            this.label26.Name = "label26";
+            this.label26.Size = new System.Drawing.Size(384, 19);
+            this.label26.TabIndex = 20;
+            this.label26.Text = "* O nickname não pode ter mais de 15 caracteres";
+            // 
             // Principal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(892, 561);
+            this.ClientSize = new System.Drawing.Size(892, 590);
+            this.Controls.Add(this.Pn_login);
+            this.Controls.Add(this.label24);
+            this.Controls.Add(this.Lbl_logado);
+            this.Controls.Add(this.label16);
+            this.Controls.Add(this.Btn_logar);
             this.Controls.Add(this.Pn_inicio);
             this.Controls.Add(this.Btn_pular);
             this.Controls.Add(this.Btn_dica);
@@ -946,7 +1076,10 @@
             this.Pn_perguntas.PerformLayout();
             this.Pn_fim.ResumeLayout(false);
             this.Pn_fim.PerformLayout();
+            this.Pn_login.ResumeLayout(false);
+            this.Pn_login.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -1015,5 +1148,15 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.PictureBox pictureBox6;
+        private System.Windows.Forms.Button Btn_logar;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.Label Lbl_logado;
+        private System.Windows.Forms.Label label24;
+        private System.Windows.Forms.Panel Pn_login;
+        private System.Windows.Forms.Button Btn_login;
+        private System.Windows.Forms.TextBox Txt_login;
+        private System.Windows.Forms.Label label25;
+        private System.Windows.Forms.Label label23;
+        private System.Windows.Forms.Label label26;
     }
 }

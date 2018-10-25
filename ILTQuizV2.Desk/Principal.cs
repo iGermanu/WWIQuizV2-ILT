@@ -24,6 +24,7 @@ namespace ILTQuizV2.Desk
             InitializeComponent();
             _database.DBName = "iltquiz";
             _database.Connect();
+            AtivarBotoes(false);
         }
 
         #region METODOS
@@ -201,6 +202,11 @@ namespace ILTQuizV2.Desk
                 }
             }
             Lbl_pontuacao.Text = pontuacao.ToString();
+            /*
+            string inserirpontuacao = "UPDATE partida SET ";
+            inserirpontuacao += "pontuacao = " + Convert.ToInt32(pontuacao) + " WHERE nickname = " + Lbl_logado.Text;
+            _database.Inserir(inserirpontuacao);
+            */
             Btn_prox.Enabled = true;
         }
 
@@ -251,6 +257,42 @@ namespace ILTQuizV2.Desk
                 BottomButtons(false);
             }
         }
+
+        public void LogarRegistrar()
+        {
+            if (Txt_login.TextLength <= 15)
+            {
+                int pontos;
+                string nickname;
+                string login = "SELECT pontuacao, nickname FROM partida WHERE nickname = " + Txt_login;
+                DataSet resultado = _database.Search(login);
+                if (resultado != null)
+                {
+                    pontos = Convert.ToInt32(resultado.Tables["tbl_resultado"].Rows[0]["pontuacao"]);
+                    nickname = resultado.Tables["tbl_resultado"].Rows[0]["nickname"].ToString();
+                }
+                else
+                {
+                    pontos = 0;
+                    nickname = Txt_login.Text;
+                    nickname.ToString();
+                    string registro = "INSERT INTO partida ";
+                    registro += "(pontuacao, nickname) VALUES (" + pontuacao + ", '" + nickname + "')";
+                    _database.Inserir(registro);
+                }
+
+                pontuacao = pontos;
+                Lbl_logado.Text = nickname;
+                AtivarBotoes(true);
+                Pn_login.Visible = false;
+                Btn_logar.Enabled = false;
+            }
+            else
+            {
+                Txt_login.Text = "";
+            }
+        }
+
         #endregion
 
         #region BOTÕES DOS TÓPICOS
@@ -424,6 +466,21 @@ namespace ILTQuizV2.Desk
             }
             Lbl_pontuacao.Text = pontuacao.ToString();
             MessageBox.Show(dica, "Dica", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+        #endregion
+
+        #region BOTÕES LOGAR
+        private void Btn_logar_Click(object sender, EventArgs e)
+        {
+            MudarTopico();
+            Pn_login.Visible = true;
+        }
+
+        private void Btn_login_Click(object sender, EventArgs e)
+        {
+            LogarRegistrar();
+            MudarTopico();
+            Pn_inicio.Visible = true;
         }
         #endregion
     }
