@@ -38,3 +38,4 @@ C:\Users\a1704184\Documents\GitHub\WWIQuizV2-ILT\ILTQuizV2.Desk\obj\Debug\ILTQui
 C:\Users\a1704184\Documents\GitHub\WWIQuizV2-ILT\ILTQuizV2.Desk\obj\Debug\ILTQuizV2.Desk.csproj.CopyComplete
 C:\Users\a1704184\Documents\GitHub\WWIQuizV2-ILT\ILTQuizV2.Desk\obj\Debug\ILTQuizV2.Desk.exe
 C:\Users\a1704184\Documents\GitHub\WWIQuizV2-ILT\ILTQuizV2.Desk\obj\Debug\ILTQuizV2.Desk.pdb
+C:\Users\a1704184\Documents\GitHub\WWIQuizV2-ILT\ILTQuizV2.Desk\bin\Debug\MySql.Data.dll

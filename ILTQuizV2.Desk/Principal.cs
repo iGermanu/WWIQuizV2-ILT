@@ -175,7 +175,7 @@ namespace ILTQuizV2.Desk
 
             string Resposta = Alternativa.Text;
             string strSQL = "SELECT correta FROM resposta ";
-            strSQL += "WHERE resposta = '" + Resposta + "'";
+            strSQL += "WHERE resposta = '" + Resposta + "' AND fk_perg = " + id_pergatual;
             DataSet resultado = _database.Search(strSQL);
             bool correta = Convert.ToBoolean(resultado.Tables["tbl_resultado"].Rows[0]["correta"]);
 
